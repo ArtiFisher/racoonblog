@@ -1,0 +1,11 @@
+<div class="fader" ng-show="isCreating"></div>
+<form class="create" ng-show="isCreating" ng-submit="submitForm()">
+	<input type="text" ng-model="author" required placeholder="Author" class="form-control">
+	<input type="text" ng-model="title" required placeholder="Title" class="form-control">
+	<textarea type="text" ng-model="text" required placeholder="Text" class="form-control"></textarea>
+	<input type="text" ng-model="url" required placeholder="Image URL" class="form-control"></textarea>
+	<input type="file" image>
+	<button class="btn btn-default" type="submit">Submit</button>
+	<button class="btn btn-default" type="button" ng-click="cancelCreating()">Cancel</button>
+</form>
+

@@ -1,0 +1,5 @@
+<ul class="nav navbar-nav">
+    <li ng-repeat="page in pages" ng-class="{active:getIndex()==$index}">
+        <a ng-click="setIndex($index)">{{page.title}}</a>
+    </li>
+</ul>

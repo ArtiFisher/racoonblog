@@ -1,0 +1,18 @@
+[
+  {
+    "_id": "53f4bb66fef38b74188ecd07",
+    "author": "E. HyperRaccoon",
+    "title": "Blogotitle of blogopost about blogoflowers",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, eum! Neque sed autem quibusdam voluptatem itaque commodi nisi laboriosam velit provident sit, ut nihil nam nostrum, fugit, et pariatur enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi eos blanditiis molestiae sit, perferendis quas magni deserunt. Voluptatem rem optio quo itaque atque magnam ea laborum repellendus, commodi, blanditiis est.",
+    "date": "22:58 Jan 01, 2014",
+    "image": "../images/img1.jpg"
+  },
+  {
+    "_id": "53f4bb66fef38b74188ecd08",
+    "author": "E. HyperRaccoon",
+    "title": "Blogotitle about colorful shit",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, eum! Neque sed autem quibusdam voluptatem itaque commodi nisi laboriosam velit provident sit, ut nihil nam nostrum, fugit, et pariatur enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi eos blanditiis molestiae sit, perferendis quas magni deserunt. Voluptatem rem optio quo itaque atque magnam ea laborum repellendus, commodi, blanditiis est.",
+    "date": "22:58 Jan 01, 2014",
+    "image": "../images/img2.jpg"
+  }
+]

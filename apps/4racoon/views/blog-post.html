@@ -1,0 +1,36 @@
+  	<article>
+		<div>
+			<img ng-src="{{article.image}}">
+			<h4><a href="#">{{article.title}}</a></h4>
+			<div class="info">
+				<span>{{article.date}}</span>
+				<a href="#">by {{article.author}}</a>
+				<div class="social">
+					<ul>
+						<li class="facebook">
+							<span class="logo"></span>
+							<span class="number">16</span>
+						</li>
+						<li class="google">
+							<span class="logo"></span>
+							<span class="number">7</span>
+						</li>
+						<li class="twitter">
+							<span class="logo"></span>
+							<span class="number">15</span>
+						</li>
+						<li class="vk">
+							<span class="logo"></span>
+							<span class="number">16</span>
+						</li>
+						<li class="yandex">
+							<span class="logo"></span>
+							<span class="number">0</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<p>{{article.text}}</p>
+			<button class="btn btn-default" type="button" ng-click="removePost(article._id)">Remove</button>
+		</div>
+	</article>

@@ -1,0 +1,10 @@
+  	<div>
+		<h4>{{article.title}}</h4>
+		<div class="info">
+			<span>{{article.date}}</span>
+			<a href="#">by {{article.author}}</a>
+		</div>
+		<img ng-src="{{article.image}}">
+		<p>{{article.text}}</p>
+		<button class="btn btn-default" type="button" ng-click="removePost(article._id)">Remove</button>
+	</div>

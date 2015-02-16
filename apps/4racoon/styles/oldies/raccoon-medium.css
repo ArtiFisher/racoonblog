@@ -1,0 +1,271 @@
+@media (max-width: 1199px) and (min-width: 660px) {
+
+	* {
+		margin: 0;
+		padding: 0;
+	}
+
+	body{
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	header {
+		text-align: center;
+		margin-bottom: 25px;
+	}
+
+	header h1 {
+		color: #6b9ad0;
+		margin-bottom: 15px;
+		font-size: 30pt;
+		display: inline;
+		vertical-align: middle;
+	}
+
+	header img {
+		height: 56px;
+		width: 56px;
+		margin: 10px 0;
+	}
+
+	nav {
+		background-color: #6b9ad0;
+		display: block;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		font-size: 0;
+		height: 55px;
+		text-align: center;
+	}
+
+	nav ul {
+		display: inline-block;
+	}
+
+	nav li {
+		display: inline-block;
+		height: 55px;
+	}
+
+	nav a {
+		display: inline-block;
+		font-size: 11pt;
+		color: #ffffff;
+		text-decoration: none;
+		line-height: 55px;
+		height: 55px;
+		padding: 0 10px;
+	}
+
+	nav a:hover {
+		background-color: #ffffff;
+		color: #333333;
+	}
+
+	nav .question {
+		font-size: 16pt; 
+		float: left;
+		margin: 2px;
+		padding: 11px 17px;
+		background-color: #7ca7d9;
+		color: #6b9ad0;
+		cursor: pointer;
+	}
+
+	nav .exclamatory {
+		font-size: 16pt; 
+		float: right;
+		margin: 2px;
+		padding: 11px 17px;
+		background-color: #7ca7d9;
+		color: #6b9ad0;
+		cursor: pointer;
+	}
+
+	.tagLabel, .menuLabel, .menuLabel {
+		display: none;
+	}
+
+	div.content{
+		margin: auto;
+	}
+
+	section article {
+		position: relative;
+	}
+
+	section article div {
+		width: 500px;
+		margin: auto;
+	}
+
+	section article>div>img {
+		width: 500px;
+    	height: auto;
+	}
+
+	section article a {
+		color: gray;
+	}
+
+	section article a:hover {
+		color: gray;
+	}
+
+	section .addons {
+		border-top: gray solid 1px;
+		border-bottom: gray solid 1px;
+		padding: 10px 0;
+		margin: 10px 0;
+	}
+
+	.social ul {
+		position: absolute;
+		right: 0;
+		top: 0px;
+		list-style: none;
+	}
+
+	.social li {
+		border-radius: 5px;
+		padding: 4px;
+		margin: 2px;
+	    cursor: pointer;
+	}
+
+	.social li span.number {
+	    padding: 4px 10px;
+	}
+
+	li.facebook, li.facebook .number {
+	    background-color: #3c5a98; 
+	}
+
+	.social li.facebook span.logo {
+	    background: url(../images/icons.png) 45px 0px;
+	    padding: 4px 10px;
+	}
+
+	li.google, li.google .number {
+	    background-color: #c25234;
+	}
+
+	.social li.google span.logo {
+	    background: url(../images/icons.png) 45px -30px;
+	    margin-left: 3px;
+	    padding: 3px 13px;
+	}
+
+	li.twitter, li.twitter .number {
+	    background-color: #00aced;
+	}
+
+	.social li.twitter span.logo {
+	    background: url(../images/icons.png) 48px -59px;
+	    padding: 2px 12px;
+	}
+
+	li.vk, li.vk .number {
+	    background-color: #48729e;
+	}
+
+	.social li.vk span.logo {
+	    background: url(../images/icons.png) 48px -86px;
+	    padding: 2px 12px;
+	}
+
+	li.yandex, li.yandex .number {
+	    background-color: #d83933;
+	}
+
+	.social li.yandex span.logo {
+	    background: url(../images/icons.png) 43px -112px;
+	    padding: 4px 10px;
+	}
+
+
+	.info img {
+		margin-left: 10px;
+	}
+
+	aside {
+		width: 500px;
+		vertical-align: top;
+		margin: auto;
+		margin-bottom: 15px;
+	}
+
+	aside article {
+		display: none;
+	}
+
+	aside article div {
+		border-bottom: #6794b7 3px solid;
+	}
+
+	aside article span {
+		font-size: 14pt;
+		background-color: #6794b7;
+		padding: 3px 11px;
+	}
+
+	aside article:first-child div span {
+		padding: 3px 8px;
+	}
+
+	aside article h4 {
+		display: inline;
+		width: 100%;
+		height: 2em;
+		width: 10px;
+	}
+
+	aside .tags {
+		padding: 0 15px;
+	}
+
+	.tag {
+		background-color: #6794b7;
+		padding: 1px 3px;
+	    cursor: pointer;
+		color: white;
+	    display: inline;
+	    position: relative;
+	    font-size: 11pt;
+	    margin-right: 20px;
+	}
+
+	.tag:hover {
+		background-color: #b2d4ec;
+		color: white;
+		text-decoration: none;
+	}
+
+	.tag:after {
+	    background: url(../images/tag-bullet.png) 0 0px;
+		content: '';
+		position: absolute;
+		top: 0px;
+		right: -17px;
+		width: 17px;
+		height: 18px;
+	}
+	
+	.tag:hover:after {
+	    background: url(../images/tag-bullet.png) 0 18px;
+	}
+
+	input {
+		display: none;
+	}
+
+	input#quest:checked+article {
+		display: block;
+	}
+
+	input#exclam:checked+article {
+		display: block;
+	}
+
+}

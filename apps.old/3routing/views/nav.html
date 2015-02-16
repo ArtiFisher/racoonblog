@@ -1,0 +1,10 @@
+<ul class="nav navbar-nav">
+	<li><a ng-href="#/home" ng-click="index=0">{{pages[0].title}}</a></li>
+	<li><a ng-href="#/about" ng-click="index=1">{{pages[1].title}}</a></li>
+	<li><a ng-href="#/contacts" ng-click="index=2">{{pages[2].title}}</a></li>
+</ul>
+<div class="jumbotron">
+  <p class="lead">
+    {{pages[index].text}}
+  </p>
+</div>
