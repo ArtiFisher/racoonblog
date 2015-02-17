@@ -1,2 +1,2 @@
 routing
-update/edit
+$http.put and articles change

@@ -164,9 +164,20 @@ app.service('posts', function($resource, $http) {
         $http.put('http://54.72.3.96:3000/posts/' + post._id, upDate)
         .success(function(){
             debugger;
-            post = $resource('http://54.72.3.96:3000/posts/:_id').get({
-                _id: post._id
-            });
+            // var getted = $resource('http://54.72.3.96:3000/posts/:_id').get({
+            //     _id: post._id
+            // });
+            // var index = articles.findIndex(function(element){
+            //     if(element._id == post._id){
+            //         return true;
+            //     }
+            //     else{
+            //         return false;
+            //     }
+
+            // });
+            // articles.slice(index, 1, getted);
+            
         });
     }
 
