@@ -19,8 +19,15 @@ angular
   ])
   .config(function ($routeProvider) {
     $routeProvider
-      .otherwise({
-        templateUrl: 'views/content.html',
+      .when('/home', {
+        templateUrl: '/views/content.html',
         controller: 'RacoonCtrl'
+      })
+      .when('/post/:postId', {
+        templateUrl: '/views/one-post.html',
+        controller: 'RacoonCtrl'
+      })
+      .otherwise({
+        redirectTo: '/home'
       });
   });

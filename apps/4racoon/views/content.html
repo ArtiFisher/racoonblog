@@ -45,7 +45,7 @@
 		</div>
 	</aside>
 	<section>
-		<button class="btn" ng-click="isCreating = true;">New post</button>
-		<blog-post ng-repeat="article in articles"></blog-post>
+		<button class="btn" ng-click="fillingForm = true;">New post</button>
+		<blog-post ng-repeat="article in articles | authorSearch"></blog-post>
 	</section>
 </div>

@@ -1,0 +1,10 @@
+  	<div class="lonely">
+			<img ng-src="{{article.image}}">
+			<h4><a href="#">{{article.title}}</a></h4>
+			<h4><a href="#">{{article._id}}</a></h4>
+			<div class="info">
+				<span>{{article.date | date}}</span>
+				<a href="#">by {{article.author}}</a>
+			<p>{{article.text}}</p>
+			<button class="btn btn-default" type="button" ng-click="removePost(article)">Remove</button>
+	</article>
