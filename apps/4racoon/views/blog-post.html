@@ -1,8 +1,7 @@
   	<article>
 		<div>
 			<img ng-src="{{article.image}}">
-			<h4><a ng-href="/post/{{article._id}}">{{article.title}}</a></h4>
-			<h4><a ng-href="/post/{{article._id}}">{{article._id}}</a></h4>
+			<h4><a ng-href="#/post/{{article._id}}">{{article.title}}</a></h4>
 			<div class="info">
 				<span>{{article.date | date}}</span>
 				<a href="#">by {{article.author}}</a>
@@ -31,8 +30,7 @@
 					</ul>
 				</div>
 			</div>
-			<p>{{article.text}}</p>
+			<p>{{article.text | preview}}</p>
 			<button class="btn btn-default" type="button" ng-click="removePost(article)">Remove</button>
-			<button class="btn btn-default" type="button" ng-click="editPost(article)">Edit</button>
 		</div>
 	</article>

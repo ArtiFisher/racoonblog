@@ -1,10 +1,15 @@
   	<div class="lonely">
-			<img ng-src="{{article.image}}">
-			<h4><a href="#">{{article.title}}</a></h4>
-			<h4><a href="#">{{article._id}}</a></h4>
+		<article>
+			<img ng-src="{{chosenPost.image}}">
+			<input type="text" ng-model="chosenPost.title" disabled class="form-control">
 			<div class="info">
-				<span>{{article.date | date}}</span>
-				<a href="#">by {{article.author}}</a>
-			<p>{{article.text}}</p>
-			<button class="btn btn-default" type="button" ng-click="removePost(article)">Remove</button>
-	</article>
+				<span>{{chosenPost.date | date}}</span>
+				<a href="#">by {{chosenPost.author}}</a>
+			</div>
+			<textarea disabled ng-model="chosenPost.text" class="form-control"></textarea>
+			<input type="file" image>
+			<input type="text" ng-model="chosenPost.image" placeholder="Image URL" class="form-control">
+			<button class="btn btn-default" type="button" ng-click="editPost()">Edit</button>
+			<button class="btn btn-default" type="button" ng-click="updatePost()">Save</button>
+		</article>
+	</div>
