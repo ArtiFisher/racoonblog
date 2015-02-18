@@ -24,18 +24,6 @@ module.exports = function (grunt) {
   // Define the configuration for all the tasks
   grunt.initConfig({
 
-    includeSource: {
-      options: {
-        basePath: 'racoon4',
-        baseUrl: 'public/'
-      },
-      myTarget: {
-        files: {
-          'dist/index.html': 'app/index.tpl.html'
-        }
-      }
-    },
-
     // Project settings
     yeoman: appConfig,
 

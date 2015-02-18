@@ -465,7 +465,7 @@
   }
 
   @media (max-width: 1023px) and (min-width: 769px) {
-    section button {
+    section > button:first-of-type {
       margin-left: 72px;
     }
   }
@@ -511,7 +511,7 @@
       margin: 0 72px;
     }
 
-    section article>div>img {
+    section article > div img {
       width: 100%;
       height: auto;
     }

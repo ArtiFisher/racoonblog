@@ -1,6 +1,6 @@
   	<article>
 		<div>
-			<img ng-src="{{article.image}}">
+			<a ng-href="#/post/{{article._id}}"><img ng-src="{{article.image}}"></a>
 			<h4><a ng-href="#/post/{{article._id}}">{{article.title}}</a></h4>
 			<div class="info">
 				<span>{{article.date | date}}</span>

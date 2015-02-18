@@ -1,6 +1,0 @@
-<ul class="nav navbar-nav">
-	<li ng-repeat="page in pages" ng-class="{active:index==$index}"><a ng-click="$parent.index = $index">{{page.title}}</a></li>
-</ul>
-<div class="jumbotron">
-  <p ng-show="$index==index" class="ng-hide" ng-repeat="page in pages">{{page.text}}</p>
-</div>

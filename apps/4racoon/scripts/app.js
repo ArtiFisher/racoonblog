@@ -20,7 +20,7 @@ angular
     .config(function($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: '/views/content.html',
+                templateUrl: '/views/main.html',
                 controller: 'RacoonCtrl'
             })
             .when('/post/:postId', {
@@ -31,3 +31,5 @@ angular
                 redirectTo: '/'
             });
     });
+    
+NProgress.configure({ease: 'ease', speed: 300});

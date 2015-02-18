@@ -8,7 +8,7 @@ app.filter('reverse', function() {
     };
 });
 
-app.filter('authorSearch', function() {
+app.filter('artiSearch', function() {
     return function(items) {
         var result = [];
         if (items) {
@@ -41,5 +41,17 @@ app.filter('date', function() {
 app.filter('preview', function() {
     return function(text) {
         return text.slice(0, 100);
+    };
+});
+
+app.filter('dateSort', function() {
+    return function(items) {
+        var result = items;
+        if (items.length > 0) {
+            result = items.sort(function(a, b){
+                return new Date(b.date) - new Date(a.date);
+            });
+        }
+        return result;
     };
 });
