@@ -4,7 +4,7 @@ angular.module('yoBootstrapApp').directive('popUp', function() {
     return {
         restrict: 'E',
         templateUrl: 'views/pop-up.html',
-        controller: function($scope, image64, posts) {
+        controller: function($rootScope, $scope, image64, posts) {
             // debugger;
             var article = {};
 
@@ -22,7 +22,7 @@ angular.module('yoBootstrapApp').directive('popUp', function() {
                     article.image = this.url;
                 }
 
-                posts.add(article, $scope.articles);
+                posts.add(article, $rootScope.articles);
 
                 // $scope.articles.push(article);
 

@@ -2,7 +2,7 @@
 
 var app = angular.module('yoBootstrapApp');
 
-app.service('posts', function($resource, $http) {
+app.service('posts', function($resource) {
     var Post = $resource('http://54.72.3.96:3000/posts/:_id', {}, {
         update: {
             method: 'PUT'

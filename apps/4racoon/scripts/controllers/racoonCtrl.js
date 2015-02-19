@@ -1,11 +1,11 @@
 'use strict';
 
-angular.module('yoBootstrapApp').controller('RacoonCtrl', function($scope, posts) {
-    NProgress.start();
+angular.module('yoBootstrapApp').controller('RacoonCtrl', function($rootScope, $scope, posts) {
+    if(typeof $rootScope.articles === 'undefined'){
+    	NProgress.start();
+        $rootScope.articles = posts.all();
+    }
     $scope.fillingForm = false;
     $scope.chosenPost = null;
     $scope.dataLoading = true;
-    $scope.$on('$routeChangeSuccess', function () {
-        $scope.articles = posts.all();
-    });
 });

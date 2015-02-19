@@ -32,4 +32,4 @@ angular
             });
     });
     
-NProgress.configure({ease: 'ease', speed: 300});
+NProgress.configure({ease: 'ease', speed: 600});
