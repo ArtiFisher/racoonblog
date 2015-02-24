@@ -1,17 +1,29 @@
 'use strict';
 
-describe('OnePostCtrl', function() {
-  beforeEach(module('yoBootstrapApp'));
+describe('OnePostCtrl', function($scope, $rootScope, $provide) {
+	beforeEach(module('yoBootstrapApp'));
 
-  var ctrl, scope;
-  beforeEach(inject(function($controller, $rootScope) {
-    scope = $rootScope.$new();
-    ctrl = $controller('OnePostCtrl', {
-      $scope: scope
-    });
-  }));
+	var ctrl, scope;
+	beforeEach(inject(function($controller, $rootScope) {
+		scope = $rootScope.$new();
+		ctrl = $controller('OnePostCtrl', {
+		  $scope: scope
+		});
+	}));
 
-  it('should test something?', 
-    function() {
-  });
+	document.querySelector = function(){
+		return {
+			classList:{
+				toggle: function(){
+					console.log('toggled editing');
+				}
+			}
+		}
+	};
+
+	it('should update post', 
+	function() {
+		scope.updatePost();
+		expect(scope.$parent.articles[scope.index]).toEqual(scope.chosenPost);
+	});
 });

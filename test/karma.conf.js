@@ -30,10 +30,20 @@ module.exports = function(config) {
       'bower_components/angular-touch/angular-touch.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
-      'apps/4racoon/scripts/**/*.js',
+      'app/scripts/**/*.js',
       'test/mock/**/*.js',
-      'test/spec/**/*.js'
+      'test/spec/**/*.js',
+      'app/views/*.html'
     ],
+
+    preprocessors: { 
+      'app/views/*.html': ['ng-html2js'] 
+    }, 
+
+    ngHtml2JsPreprocessor: { 
+      stripPrefix: 'app/', 
+      moduleName: 'my.templates' 
+    },
 
     // list of files / patterns to exclude
     exclude: [
@@ -57,7 +67,8 @@ module.exports = function(config) {
     // Which plugins to enable
     plugins: [
       'karma-phantomjs-launcher',
-      'karma-jasmine'
+      'karma-jasmine',
+      'karma-chrome-launcher'
     ],
 
     // Continuous Integration mode

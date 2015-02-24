@@ -1,0 +1,9 @@
+tests
+
+
+
+
+filter with routing, coloring
+
+classyFilter -> directive to access element
+classChange directive

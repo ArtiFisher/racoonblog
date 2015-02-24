@@ -1,0 +1,31 @@
+<pop-up></pop-up>
+
+<div class="content">
+	<aside>
+		<input type="radio" name="labels" id="quest">
+		<article class="about">
+			<h4>ABOUT</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, totam consequuntur, velit sint expedita adipisci ipsam voluptas sed rem fuga vitae! Placeat quasi illo recusandae, molestias necessitatibus laboriosam a, enim?</p>
+		</article>
+		<input type="radio" name="labels" id="exclam">
+		<article class="some-shit">
+			<h4>SOME SHIT</h4>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, totam consequuntur, velit sint expedita adipisci ipsam voluptas sed rem fuga vitae! Placeat quasi illo recusandae, molestias necessitatibus laboriosam a, enim? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, totam consequuntur, velit sint expedita adipisci ipsam voluptas sed rem fuga vitae! Placeat quasi illo recusandae, molestias necessitatibus laboriosam a, enim?</p>
+		</article>
+		<input type="radio" name="labels" id="tags">
+		<div class="tags">
+			<a href="#/tags" class="tag">coon</a>
+			<a href="#/tags" class="tag">cat</a>
+			<a href="#/tags" class="tag">dog</a>
+			<a href="#/tags" class="tag">raccoon</a>
+			<a href="#/tags" class="tag">designer</a>
+			<a href="#/tags" class="tag">mammal</a>
+			<a href="#/tags" class="tag">whale</a>
+			<a href="#/tags" class="tag">ninja</a>
+		</div>
+	</aside>
+	<section>
+		<button class="btn" ng-click="fillingForm = true;">New post</button>
+		<blog-post ng-repeat="article in articles | artiSearch"></blog-post>
+	</section>
+</div>

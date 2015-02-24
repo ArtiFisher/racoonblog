@@ -1,0 +1,112 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="yoBootstrapApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="container" ng-controller="MainCtrl">
+        <header class="row">
+    
+        </header>
+        <section class="row center">
+            <div class="col-md-6 col-md-offset-3 center">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 center">
+                        <img src="https://e3s.epam.com/rest/logo/v1/logo?uri=attachment://b1a9ed8d-8782-41c4-a954-f78c8e23db64" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <h1>Pavel Liber</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet odio praesentium optio quasi, ea tenetur facilis repellendus quidem amet voluptatem dolorum ducimus hic, temporibus facere! Recusandae eveniet expedita itaque nesciunt? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet odio praesentium optio quasi, ea tenetur facilis repellendus quidem amet voluptatem dolorum ducimus hic, temporibus facere! Recusandae eveniet expedita itaque nesciunt?</p>
+                </div>
+            </div>    
+
+        </section>
+        <hr>
+        <div class="row form-group">
+            <div class="col-md-6 col-md-offset-2">
+                <input type="text" class="form-control" ng-model="query">
+            </div>
+            <div class="col-md-2">
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                    {{currentBuilding}}
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li ng-repeat="building in buildings" ng-click="$parent.currentBuilding=building" role="presentation"><a role="menuitem" tabindex="-1">{{building}}</a></li>
+                  </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div ng-repeat="mentor in mentors | search:query | building:currentBuilding" class="col-md-8 col-md-offset-2">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="{{mentor.photo}}">
+                    </div>
+                    <div class="col-md-8">
+                        <h3 class="list-group-item-heading">
+                            {{mentor.name}}
+                            <div></div>
+                            <small>{{mentor.title}} at {{mentor.building}} {{mentor.office}}</small>
+                        </h3>
+                        <p ng-bind-html="mentor.description | highlight:query"></p>
+                    </div>
+                </div>
+                <div class="row center">
+                    <span ng-repeat="tag in mentor.tags" ng-bind-html="tag | highlight:query"></span>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- build:js(./) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="resources/mentors.js"></script>
+    <script src="scripts/services/data.js"></script>
+    <script src="scripts/controllers/mainCtrl.js"></script>
+    <script src="scripts/filters/searchFilter.js"></script>
+    <script src="scripts/filters/buildingFilter.js"></script>
+    <script src="scripts/filters/highlightFilter.js"></script>
+    <!-- endbuild -->
+
+  </body>
+</html>

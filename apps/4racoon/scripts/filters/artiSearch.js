@@ -6,7 +6,6 @@ angular.module('yoBootstrapApp').filter('artiSearch', function() {
         if (items) {
             for (var i = 0; i < items.length; i++) {
                 if (items[i].author === 'arti') {
-                    // debugger;
                     result.push(items[i]);
                 }
             }
